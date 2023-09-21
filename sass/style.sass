@@ -1,0 +1,261 @@
+@import 'variables'
+@import 'utilities'
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap')
+//<i class="fab fa-spotify"></i>7
+
+@include reset
+
+//header
+.header
+    background-color: $bg-black
+
+    &_logo
+        width: 150px
+        height: 45px
+
+        @include mobile
+            margin: 0
+    
+    .nav_btn
+        margin-left: 1em
+        text-transform: capitalize
+        padding: .3em 2em
+
+        @include mobile
+            margin: 0
+
+    @include mobile
+        &
+            width: 100%
+    
+.nav
+    display: flex
+
+    &_item
+        margin: 0 1.2em
+
+        @include mobile
+            margin: 0
+
+    &_link
+        color: $font-white
+    
+        &:hover
+            border-bottom: 2px solid #FFF
+            
+
+    @include mobile
+        .nav_link
+            display: none
+
+        .nav_btn
+            margin-left: 0
+            text-transform: capitalize
+            padding: .3em 2em
+            
+.wrap
+    max-width: 80%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 0 auto
+    padding: 1.5em 0
+
+    @include mobile
+        max-width: 90%
+
+//BANNER
+.banner
+    background: url('../img/mesh-gradient.png')
+    background-size: cover
+    background-position: center
+    height: 80vh
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    @include mobile
+        flex-direction: column
+        background-color: $bg-green
+        align-items: center
+        justify-content: center
+        height: 100vh
+
+    &_content
+        width: 40%
+        margin: 0 auto
+
+        @include mobile
+            width: 100%
+
+    &_title
+        @include section-title
+        color: $font-white
+        margin-bottom: 1em
+
+        @include mobile
+            margin-top: -100px
+            margin-bottom: 3em
+            margin-left: 5px
+    &_btn
+        font-size: 18px
+        letter-spacing: 0.145em
+
+        @include mobile
+            font-size: 16px
+            margin-left: 15%
+
+    &_img
+        align-self: normal
+        margin-right: 90px
+
+        @include mobile
+            display: none
+
+//FEATURES
+.features
+
+    &_container
+        display: flex
+        margin: 0
+        max-width: 80%
+        margin: auto
+
+        &_item
+            text-align: center
+            width: 20%
+            margin: 5em auto
+
+            @include mobile
+                width: 90%
+                margin: 2em auto
+
+            &_title
+                font-size: 18px
+                font-weight: bold
+                margin: 1em auto
+
+            &_text
+                @include line-height
+
+            
+        
+        @include mobile
+            flex-direction: column
+            max-width: 100%
+
+//CREDIT CARD SECTION
+.credit-card
+    background: $bg-green
+    height: 50vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    .section-title
+        margin-top: 0
+        margin-bottom: .3em
+
+        @include mobile
+            color: $font-white
+
+    &_text
+        font-size: 36px
+        font-weight: 600
+        text-align: center
+
+        @include mobile
+            font-size: 30px
+            color: $font-white
+
+//FAQ
+.faq
+    margin-bottom: 4em
+
+    &_title
+        margin-bottom: 1em
+
+    &_faq
+        display: flex
+        flex-direction: column
+
+        &_item
+            width: 30%
+            margin: 1em auto
+
+            @include mobile
+                width: 90%
+
+        &_header
+            display: flex
+            justify-content: space-between
+            align-items: center
+            border-bottom: 1px solid #C8C8C8
+            padding-bottom: .5em
+        
+        &_body
+            max-height: 0
+            overflow: hidden
+            transition: max-height .5s linear
+
+            p
+                margin-top: 1em
+                @include line-height
+    
+    &_active
+        max-height: 300px
+
+//LASTCALL
+.last-call
+    background: $bg-green
+    height: 40vh
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    h2
+        margin-bottom: .6em
+
+        @include mobile
+            color: $bg-white
+
+    &_btn
+        padding: 1em 4em
+        font-size: 18px
+        letter-spacing: 0.145em
+
+        @include mobile
+            font-size: 16px
+//footer
+.footer
+    background-color: $bg-black
+
+    .nav_link
+        font-size: 14px
+
+    .footer_copy-right
+        color: $font-white
+        font-size: 14px
+        margin-right: 30px
+
+
+        @include mobile
+            text-align: center
+            margin: 0 auto
+//BTN
+.btn
+    background-color: $bg-white
+    padding: 1em 2em
+    border-radius: 50px
+    color: $font-black
+    font-weight: 500
+    text-transform: uppercase
+
+    @include mobile
+
+//TITULOS
+.section-title
+        @include section-title
+        text-align: center
+        margin-top: 1em
